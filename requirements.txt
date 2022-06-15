@@ -1,0 +1,6 @@
+djangorestframework
+redis
+django
+celery
+psycopg2-binary
+python-decouple

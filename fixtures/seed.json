@@ -1,0 +1,59 @@
+[
+    {
+      "model": "api.passenger",
+      "pk": 1,
+      "fields": {
+        "name": "John",
+        "surname": "Lennon",
+        "email" : "brk@gmail.com",
+        "status" : 1,
+        "phone_number" : "+905555555555"
+      }
+    },
+    {
+        "model": "api.passenger",
+        "pk": 2,
+        "fields": {
+          "name": "Lil",
+          "surname": "Wayne",
+          "email" : "brk88@gmail.com",
+          "status" : 1,
+          "phone_number" : "+905555555555"
+        }
+      },
+      {
+        "model": "api.passenger",
+        "pk": 3,
+        "fields": {
+          "name": "İsmet",
+          "surname": "İnönü",
+          "email" : "brk4f@gmail.com",
+          "status" : 0,
+          "phone_number" : "+905555555555"
+        }
+      },
+      {
+        "model": "api.passenger_trip",
+        "pk": 1,
+        "fields": {
+          "passenger_id": 1,
+          "total_distance": 5
+        }
+      },
+      {
+        "model": "api.passenger_trip",
+        "pk": 2,
+        "fields": {
+          "passenger_id": 2,
+          "total_distance": 44
+        }
+      },
+      {
+        "model": "api.passenger_trip",
+        "pk": 3,
+        "fields": {
+          "passenger_id": 3,
+          "total_distance": 59
+        }
+      }
+  ]
