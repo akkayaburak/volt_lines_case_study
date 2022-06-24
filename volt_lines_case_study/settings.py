@@ -10,8 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import django
+
+django.setup()
+
+
 from pathlib import Path
 from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,15 +38,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites'
+    'api.apps.apiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'api.apps.ApiConfig'
+    'rest_framework'
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,3 +141,17 @@ DATABASES = {
 FIXTURE_DIRS = [
     'fixtures',
 ]
+
+REST_FRAMEWORK = {
+    'UNAUTHENTICATED_USER': None
+}
+
+
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# import sys
+# if BASE_DIR not in sys.path:
+#     sys.path.append(BASE_DIR)
+# os.environ['DJANGO_SETTINGS_MODULE'] =  "volt_lines_case_study.settings"
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "volt_lines_case_study.settings")
+
+
